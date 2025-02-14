@@ -1,0 +1,68 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <!-- Logo Section -->
+      <div class="logo mr-auto">
+        <h1 class="text-light">
+          <a href="/"><span>Platform Learning</span></a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="Platform Learning Logo" class="img-fluid"></a> -->
+      </div>
+  
+      <!-- Navigation -->
+      <nav class="nav-menu d-none d-lg-block" aria-label="Main Navigation">
+        <ul class="nav-menu" role="menu">
+          <li role="menuitem"><a href="/">Home</a></li>
+      
+          <li class="drop-down" role="menuitem" aria-haspopup="true">
+              <a href="#">Board</a>
+              <ul class="dropdown-menu">
+                  <li><a href="/board">Board</a></li>
+                  <li><a href="#" >Comment</a></li>
+                  <li><a href="#" >File Upload</a></li>
+                  <li><a href="#" >Ajax</a></li>
+              </ul>
+          </li>
+      
+          <li class="drop-down" role="menuitem" aria-haspopup="true">
+              <a href="/ds_querytolist">Data Study</a>
+              <ul class="dropdown-menu">
+                  <li><a href="/ds_querytolist">Queryset List</a></li>
+                  <li><a href="/ds_orm">Dataset Test</a></li>
+              </ul>
+          </li>
+      
+          <li class="drop-down" role="menuitem" aria-haspopup="true">
+              <a href="#">Study</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#" >Markdown</a></li>
+                  <li><a href="#" >API(GraphQL)</a></li>
+              </ul>
+          </li>
+      
+          <li role="menuitem">
+              <a href="http://www.globalintelligence.kr/" target="_blank" rel="noopener noreferrer">
+                  FAMILY
+              </a>
+          </li>
+      
+          <li class="get-started"><a href="#">Get Started</a></li>
+      </ul>
+      
+      </nav>
+      <!-- End Navigation -->
+    </div>
+  </header>
+  <!-- End Header -->
+  
+  <!-- JavaScript for Planned Features -->
+  <script>
+    document.querySelectorAll('.planned-feature').forEach(item => {
+      item.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('This feature is planned for future updates.');
+      });
+    });
+  </script>
+  
