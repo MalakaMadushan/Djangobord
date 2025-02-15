@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% include "navbar.html" %}
+
+    <!-- ======= Hero Section ======= -->
+   
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="bord-list-container">
+                    <div class="header-container">
+                        <h1 class="bord-list-heading">Bord List</h1>
+                        <button class="btn btn-primary btn-md">Register</button>
+
+                    </div>
+                    <table class="bord-list-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Note</th>
+                                <th>Writer</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in bordlist %}
+                                <tr>
+                                    <td>{{ x.b_title }}</td>
+                                    <td>{{ x.b_note }}</td>
+                                    <td>{{ x.b_writer }}</td>
+                                    <td>{{ x.b_date }}</td>
+                                    <td>
+                                        <button class="btn btn-info btn-sm">View</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- End Hero Section -->
+
+    {% include "footer.html" %}
+
+{% endblock %}

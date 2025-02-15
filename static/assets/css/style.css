@@ -1,311 +1,376 @@
 /* General Styles */
 body {
-    background-color: #f8f9fa;
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header */
-  #header {
-    background: #007bff;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-  
-  /* Logo */
-  .logo h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-  }
-  
-  /* Navigation */
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
-  
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-  }
-  
-  .nav-menu ul li {
-    margin: 0 10px;
-    position: relative;
-  }
-  
-  .nav-menu ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    border-radius: 5px;
-  }
-  
-  .nav-menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
+  background-color: #f8f9fa;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+/* Header */
+#header {
+  background: #007bff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
 
-  /* Dropdown Menu */
+/* Logo */
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.nav-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Menu */
 .nav-menu .drop-down {
-    position: relative;
-  }
-  
-  .nav-menu .drop-down > a {
-    cursor: pointer;
-    color: white;
-    font-weight: 600;
-    padding: 12px 18px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
-  .nav-menu .drop-down > a:hover {
-    background: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Dropdown Menu */
+  position: relative;
+}
+
+.nav-menu .drop-down > a {
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  padding: 12px 18px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.nav-menu .drop-down > a:hover {
+  background: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu */
+.nav-menu .drop-down .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 12px 0;
+  min-width: 200px;
+  border-radius: 8px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.nav-menu .drop-down:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+
+.nav-menu .drop-down .dropdown-menu li {
+  /* padding: 10px 20px; */
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu .drop-down .dropdown-menu a {
+  color: #333;
+  display: block;
+  padding: 10px 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-menu .drop-down .dropdown-menu a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-menu .drop-down .dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive adjustments for dropdown */
+@media (max-width: 1024px) {
   .nav-menu .drop-down .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    padding: 12px 0;
-    min-width: 200px;
-    border-radius: 8px;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-  }
-  
-  .nav-menu .drop-down:hover .dropdown-menu {
-    display: block;
+    position: static;
+    box-shadow: none;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s;
   }
-  
-  .nav-menu .drop-down .dropdown-menu li {
-    /* padding: 10px 20px; */
-    transition: background-color 0.3s ease;
+  .nav-menu .drop-down > a {
+    padding: 12px 20px;
   }
-  
-  .nav-menu .drop-down .dropdown-menu a {
-    color: #333;
-    display: block;
-    padding: 10px 20px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .nav-menu .drop-down .dropdown-menu a:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .nav-menu .drop-down .dropdown-menu li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Responsive adjustments for dropdown */
-  @media (max-width: 1024px) {
-    .nav-menu .drop-down .dropdown-menu {
-      position: static;
-      box-shadow: none;
-      opacity: 1;
-      visibility: visible;
-    }
-    .nav-menu .drop-down > a {
-      padding: 12px 20px;
-    }
-  }
-  
-  
-  /* Hero Section */
-  #hero {
-    display: flex;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  background: url("{% static 'assets/img/hero-bg.jpg' %}") no-repeat center
+    center;
+  background-size: cover;
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional, set background color if desired */
+}
+
+#hero h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-get-started {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-get-started:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Get Started Button */
+.get-started a {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-started a:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Footer */
+#footer {
+  background: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-menu ul {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 90vh;
-    text-align: center;
-    background: url("{% static 'assets/img/hero-bg.jpg' %}") no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-  }
-  
-  #hero h1 {
-    color: white;
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Buttons */
-  .btn-get-started {
     background: #007bff;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s ease-in-out;
-  }
-  
-  .btn-get-started:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-  }
-  
-  /* Get Started Button */
-  .get-started a {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .get-started a:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-  }
-  
-  /* Footer */
-  #footer {
-    background: #343a40;
-    color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
     padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer-links a {
-    color: #ddd;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .footer-links a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .nav-menu ul {
-      flex-direction: column;
-      align-items: center;
-      background: #007bff;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      display: none;
-      padding: 20px 0;
-    }
-  
-    .nav-menu ul li {
-      margin: 10px 0;
-    }
-  
-    .nav-menu ul li a {
-      display: block;
-      padding: 12px 20px;
-    }
-  
-    /* Mobile Menu Button */
-    .mobile-menu {
-      display: block;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-      margin-left: auto;
-    }
-  
-    /* Show menu when active */
-    .nav-menu.active ul {
-      display: flex;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 28px;
-    }
-  
-    .btn-get-started {
-      padding: 10px 20px;
-      font-size: 14px;
-    }
-  
-    .get-started a {
-      padding: 10px 20px;
-      font-size: 14px;
-    }
   }
 
-  /* Header Text (Platform Learning) */
-.text-light {
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .nav-menu ul li a {
+    display: block;
+    padding: 12px 20px;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
     font-size: 28px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 10px 0;
-    display: inline-block;
-  }
-  
-  /* Link inside the header */
-  .text-light a {
-    text-decoration: none;
-    color: inherit; /* Inherits white from .text-light */
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-  }
-  
-  /* Hover Effect */
-  .text-light a:hover {
-    color: #f8d210; /* Light yellow highlight */
-    transform: scale(1.05);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .text-light {
-      font-size: 22px;
-    }
   }
 
-  
-  
-  
+  .btn-get-started {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .get-started a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Header Text (Platform Learning) */
+.text-light {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+/* Link inside the header */
+.text-light a {
+  text-decoration: none;
+  color: inherit; /* Inherits white from .text-light */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.text-light a:hover {
+  color: #f8d210; /* Light yellow highlight */
+  transform: scale(1.05);
+}
+
+/* bord list style */
+
+.bord-list-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Align heading and button on opposite ends */
+  align-items: center; /* Vertically center content */
+  margin-bottom: 20px; /* Space between heading and table */
+}
+
+.bord-list-heading {
+  color: rgb(0, 123, 255) !important;
+  text-align: left;
+  margin-bottom: 0; /* Remove margin-bottom to keep heading tight */
+  flex-grow: 1;
+}
+
+
+.bord-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bord-list-table th,
+.bord-list-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.bord-list-table th {
+  background-color: rgb(210, 214, 216);
+}
+
+.bord-list-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.btn-register {
+  background-color: #4035dd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: right;
+  margin-left: auto; 
+}
+
+.register-btn:hover {
+  background-color: #2316d6; /* Darken the button on hover */
+}
+
+/* bord style */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .text-light {
+    font-size: 22px;
+  }
+}
