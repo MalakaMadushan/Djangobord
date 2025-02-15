@@ -14,7 +14,19 @@ def bord(request):
     context = { 'bordlist': bordlist}
     rendered_template = template.render(context,request)
     return HttpResponse(rendered_template)
-    # return HttpResponse(template.render({}, request))
+
+def view(request):
+    bordlist = Bord.objects.all().values()
+    template = loader.get_template('bord_view.html')
+    context = { 'bordlist': bordlist}
+    rendered_template = template.render(context,request)
+    return HttpResponse(rendered_template)
+
+
+def write(request):
+    template = loader.get_template('bord_write.html')
+    return HttpResponse(template.render())
+
 
 
      
